@@ -1,0 +1,6 @@
+.main {
+  &-wrapper {
+    @include span(12 wide of 12 no-gutters);
+    margin-top: 20rem;
+  }
+}

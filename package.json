@@ -1,0 +1,25 @@
+{
+  "name": "propeller",
+  "version": "0.0.1",
+  "description": "Propeller Demo",
+  "main": "index.js",
+  "scripts": {
+    "sass-compile": "node-sass --output-style compact sass/style.scss style.css",
+    "sass-compile-critical": "node-sass --output-style compressed sass/style-critical.scss style-critical.css",
+    "sass-all": "npm-run-all sass-compile sass-compile-critical",
+    "sass-watch": "onchange 'sass/**/*' -- npm run sass-all",
+
+    "housekeeping": "npm-run-all clean make",
+      "clean": "rm -rf staging/*",
+      "make": "mkdir staging/libs && mkdir staging/js && mkdir staging/template-parts && mkdir staging/js/custom",
+
+    "copy-stuff": "npm-run-all copy-root copy-css copy-templates",
+      "copy-root": "cp *.php staging",
+      "copy-css": "cp *.css staging",
+      "copy-templates": "cp template-parts/*.php staging/template-parts",
+
+    "build": "npm-run-all housekeeping copy-stuff"
+  },
+  "author": "",
+  "license": "ISC"
+}

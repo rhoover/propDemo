@@ -1,0 +1,22 @@
+{
+  "name": "propeller",
+  "authors": [
+    "Robin Hoover <robin.hoover@gmail.com>"
+  ],
+  "description": "Propeller Demo",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "^2.2.12",
+    "modular-scale": "^2.1.3"
+  }
+}
