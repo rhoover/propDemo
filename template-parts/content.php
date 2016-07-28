@@ -9,7 +9,8 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<!-- #post -->
+<article>
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
@@ -44,4 +45,4 @@
 	<footer class="entry-footer">
 		<?php propeller_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</article>
